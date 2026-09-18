@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Interactive JavaScript To-Do List application.">
+
+    <meta name="author"
+          content="My Portfolio">
+
+    <title>My Portfolio | To-Do List</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">
+        Skip to main content
+    </a>
+
+
+    <!-- Header -->
+    <header class="site-header">
+
+        <div class="container header-content">
+
+            <div>
+
+                <p class="site-title">
+                    My Portfolio
+                </p>
+
+                <p class="site-tagline">
+                    CSE Student | Python Developer
+                </p>
+
+            </div>
+
+
+            <!-- Navigation -->
+            <nav class="site-nav"
+                 aria-label="Main navigation">
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="projects.html">
+                            Projects
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="todo.html"
+                           aria-current="page">
+                            To-Do List
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                    <!-- Dark / Light Mode -->
+                    <li>
+                        <button
+                            id="themeToggle"
+                            type="button">
+                            🌙 Dark Mode
+                        </button>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+
+        <!-- Page Banner -->
+        <section class="page-banner">
+
+            <div class="container">
+
+                <h1>
+                    My To-Do List
+                </h1>
+
+                <p>
+                    Manage your tasks using JavaScript.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- To-Do Application -->
+        <section class="todo-section">
+
+            <div class="container">
+
+                <div class="todo-app">
+
+                    <h2>
+                        Task Manager
+                    </h2>
+
+
+                    <!-- Add Task -->
+                    <div class="todo-form">
+
+                        <label for="taskInput">
+                            Add a new task
+                        </label>
+
+                        <div class="todo-input-group">
+
+                            <input
+                                type="text"
+                                id="taskInput"
+                                name="task"
+                                placeholder="Enter your task..."
+                                autocomplete="off">
+
+                            <button
+                                type="button"
+                                id="addTaskButton"
+                                class="btn">
+                                Add Task
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Filters -->
+                    <div class="todo-filters"
+                         aria-label="Task filters">
+
+                        <button
+                            type="button"
+                            class="filter-btn active"
+                            data-filter="all">
+                            All
+                        </button>
+
+                        <button
+                            type="button"
+                            class="filter-btn"
+                            data-filter="active">
+                            Active
+                        </button>
+
+                        <button
+                            type="button"
+                            class="filter-btn"
+                            data-filter="completed">
+                            Completed
+                        </button>
+
+                    </div>
+
+
+                    <!-- Task List -->
+                    <ul
+                        id="taskList"
+                        class="todo-list"
+                        aria-live="polite">
+                    </ul>
+
+
+                    <!-- Task Count -->
+                    <p
+                        id="taskCount"
+                        class="task-count">
+                        0 tasks
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <p>
+                &copy; 2026 My Portfolio. All rights reserved.
+            </p>
+
+            <p>
+                Built using semantic HTML5, CSS3 and JavaScript.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
